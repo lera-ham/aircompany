@@ -22,17 +22,17 @@ namespace Aircompany.Planes
             return _model;
         }
 
-        public int GetMS()
+        public int GetMaxSpeed()
         {
             return _maxSpeed;
         }
 
-        public int MAXFlightDistance()
+        public int getMaxFlightDistance()
         {
             return _maxFlightDistance;
         }
 
-        public int MAXLoadCapacity()
+        public int getMaxLoadCapacity()
         {
             return _maxLoadCapacity;
         }
@@ -65,7 +65,7 @@ namespace Aircompany.Planes
             hashCode = hashCode * -1521134295 + _maxFlightDistance.GetHashCode();
             hashCode = hashCode * -1521134295 + _maxLoadCapacity.GetHashCode();
             return hashCode;
-        }        
+        }
 
     }
 }
