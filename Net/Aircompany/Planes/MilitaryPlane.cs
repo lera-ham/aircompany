@@ -4,7 +4,7 @@ namespace Aircompany.Planes
 {
     public class MilitaryPlane : Plane
     {
-        public MilitaryType _type;
+        public MilitaryType _type { get; set; }
 
         public MilitaryPlane(string model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryType type)
             : base(model, maxSpeed, maxFlightDistance, maxLoadCapacity)
@@ -28,7 +28,7 @@ namespace Aircompany.Planes
             return hashCode;
         }
 
-        public MilitaryType PlaneTypeIs()
+        public MilitaryType GetPlaneType()
         {
             return _type;
         }
@@ -39,6 +39,6 @@ namespace Aircompany.Planes
             return base.ToString().Replace("}",
                     ", type=" + _type +
                     '}');
-        }        
+        }
     }
 }

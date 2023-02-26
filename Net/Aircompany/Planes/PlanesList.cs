@@ -27,12 +27,12 @@ namespace Aircompany.Planes
             return _maxSpeed;
         }
 
-        public int getMaxFlightDistance()
+        public int GetMaxFlightDistance()
         {
             return _maxFlightDistance;
         }
 
-        public int getMaxLoadCapacity()
+        public int GetMaxLoadCapacity()
         {
             return _maxLoadCapacity;
         }
