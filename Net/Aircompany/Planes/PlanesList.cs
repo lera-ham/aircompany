@@ -39,22 +39,13 @@ namespace Aircompany.Planes
 
         public override string ToString()
         {
-            return "Plane{" +
-                "model='" + _model + '\'' +
-                ", maxSpeed=" + _maxSpeed +
-                ", maxFlightDistance=" + _maxFlightDistance +
-                ", maxLoadCapacity=" + _maxLoadCapacity +
-                '}';
+            return "Plane{" + "model='" + _model + '\'' + ", maxSpeed=" + _maxSpeed + ", maxFlightDistance=" + _maxFlightDistance + ", maxLoadCapacity=" + _maxLoadCapacity + '}';
         }
 
         public override bool Equals(object obj)
         {
             var plane = obj as Plane;
-            return plane != null &&
-                   _model == plane._model &&
-                   _maxSpeed == plane._maxSpeed &&
-                   _maxFlightDistance == plane._maxFlightDistance &&
-                   _maxLoadCapacity == plane._maxLoadCapacity;
+            return plane != null && _model == plane._model && _maxSpeed == plane._maxSpeed && _maxFlightDistance == plane._maxFlightDistance && _maxLoadCapacity == plane._maxLoadCapacity;
         }
 
         public override int GetHashCode()
@@ -66,6 +57,5 @@ namespace Aircompany.Planes
             hashCode = hashCode * -1521134295 + _maxLoadCapacity.GetHashCode();
             return hashCode;
         }
-
     }
 }

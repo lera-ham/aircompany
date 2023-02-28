@@ -59,7 +59,6 @@ namespace Aircompany
                     transportMilitaryPlanes.Add(plane);
                 }
             }
-
             return transportMilitaryPlanes;
         }
 
@@ -78,7 +77,6 @@ namespace Aircompany
             return new Airport(Planes.OrderBy(w => w.GetMaxLoadCapacity()));
         }
 
-
         public IEnumerable<Plane> GetPlanes()
         {
             return Planes;
@@ -86,9 +84,7 @@ namespace Aircompany
 
         public override string ToString()
         {
-            return "Airport{" +
-                    "planes=" + string.Join(", ", Planes.Select(x => x.GetModel())) +
-                    '}';
+            return "Airport{" + "planes=" + string.Join(", ", Planes.Select(x => x.GetModel())) + '}';
         }
     }
 }
