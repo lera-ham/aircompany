@@ -50,12 +50,13 @@ namespace Aircompany.Planes
 
         public override int GetHashCode()
         {
-            var hashCode = -1043886837;
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(_model);
-            hashCode = hashCode * -1521134295 + _maxSpeed.GetHashCode();
-            hashCode = hashCode * -1521134295 + _maxFlightDistance.GetHashCode();
-            hashCode = hashCode * -1521134295 + _maxLoadCapacity.GetHashCode();
-            return hashCode;
+            var HashCode = -1043886837;
+            var HashCodeNumber = -1521134295;
+            HashCode = HashCode * HashCodeNumber + EqualityComparer<string>.Default.GetHashCode(_model);
+            HashCode = HashCode * HashCodeNumber + _maxSpeed.GetHashCode();
+            HashCode = HashCode * HashCodeNumber + _maxFlightDistance.GetHashCode();
+            HashCode = HashCode * HashCodeNumber + _maxLoadCapacity.GetHashCode();
+            return HashCode;
         }
     }
 }

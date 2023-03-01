@@ -20,10 +20,10 @@ namespace Aircompany.Planes
 
         public override int GetHashCode()
         {
-            var hashCode = 1701194404;
-            hashCode = hashCode * -1521134295 + base.GetHashCode();
-            hashCode = hashCode * -1521134295 + _type.GetHashCode();
-            return hashCode;
+            var HashCode = 1701194404;
+            HashCode = HashCode * HashCodeNumber + base.GetHashCode();
+            HashCode = HashCode * HashCodeNumber + _type.GetHashCode();
+            return HashCode;
         }
 
         public MilitaryType GetPlaneType()
