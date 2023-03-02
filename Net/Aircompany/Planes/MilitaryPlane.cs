@@ -4,7 +4,7 @@ namespace Aircompany.Planes
 {
     public class MilitaryPlane : Plane
     {
-        public MilitaryType _type { get; set; }
+        private MilitaryType _type;
 
         public MilitaryPlane(string model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryType type)
             : base(model, maxSpeed, maxFlightDistance, maxLoadCapacity)
@@ -20,7 +20,7 @@ namespace Aircompany.Planes
 
         public override int GetHashCode()
         {
-            var HashCode = 1701194404;
+            const var HashCode = 1701194404;
             HashCode = HashCode * HashCodeNumber + base.GetHashCode();
             HashCode = HashCode * HashCodeNumber + _type.GetHashCode();
             return HashCode;
