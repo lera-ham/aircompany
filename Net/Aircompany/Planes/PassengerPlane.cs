@@ -19,10 +19,10 @@ namespace Aircompany.Planes
 
         public override int GetHashCode()
         {
-            const var HashCode = 751774561;
-            HashCode = HashCode * HashCodeNumber + base.GetHashCode();
-            HashCode = HashCode * HashCodeNumber + _passengersCapacity.GetHashCode();
-            return HashCode;
+            int HashCode = 751774561;
+            hashCode = hashCode * HashCodeNumber + base.GetHashCode();
+            hashCode = hashCode * HashCodeNumber + _passengersCapacity.GetHashCode();
+            return hashCode;
         }
 
         public int GetPassengersCapacity()

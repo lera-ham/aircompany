@@ -8,6 +8,7 @@ namespace Aircompany.Planes
         private int _maxSpeed;
         private int _maxFlightDistance;
         private int _maxLoadCapacity;
+        public const int HashCodeNumber = -1521134295;
 
         public Plane(string model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity)
         {
@@ -50,8 +51,7 @@ namespace Aircompany.Planes
 
         public override int GetHashCode()
         {
-            const var HashCode = -1043886837;
-            const var HashCodeNumber = -1521134295;
+            int HashCode = -1043886837;
             HashCode = HashCode * HashCodeNumber + EqualityComparer<string>.Default.GetHashCode(_model);
             HashCode = HashCode * HashCodeNumber + _maxSpeed.GetHashCode();
             HashCode = HashCode * HashCodeNumber + _maxFlightDistance.GetHashCode();

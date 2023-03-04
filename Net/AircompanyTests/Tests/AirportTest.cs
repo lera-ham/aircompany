@@ -53,7 +53,7 @@ namespace AircompanyTests.Tests
             List<Plane> planesSortedByMaxLoadCapacity = airport.GetPlanes().ToList();
 
             var actualPlanesSortedByMaxLoadCapacity = airport.Planes.ToList();
-            var expectedPlanesSortedByMaxLoadCapacity = _planes.OrderBy(x => x.MaxLoadCapacity);
+            var expectedPlanesSortedByMaxLoadCapacity = _planes.OrderBy(x => x._maxLoadCapacity);
             Assert.IsTrue(actualPlanesSortedByMaxLoadCapacity.SequenceEqual(expectedPlanesSortedByMaxLoadCapacity));
         }
     }
